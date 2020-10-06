@@ -27,7 +27,6 @@
 
 *Inherited from [BadBoundsError](badboundserror.md).[message](badboundserror.md#message)*
 
-*Defined in home/nhscc/.npm/_npx/1664326/lib/node_modules/typescript/lib/lib.es5.d.ts:974*
 
 ___
 
@@ -37,7 +36,6 @@ ___
 
 *Inherited from [BadBoundsError](badboundserror.md).[name](badboundserror.md#name)*
 
-*Defined in home/nhscc/.npm/_npx/1664326/lib/node_modules/typescript/lib/lib.es5.d.ts:973*
 
 ___
 
@@ -47,7 +45,6 @@ ___
 
 *Inherited from [BadBoundsError](badboundserror.md).[stack](badboundserror.md#stack)*
 
-*Defined in home/nhscc/.npm/_npx/1664326/lib/node_modules/typescript/lib/lib.es5.d.ts:975*
 
 ___
 
@@ -55,4 +52,3 @@ ___
 
 ▪ `Static` **RangeError**: RangeErrorConstructor
 
-*Defined in home/nhscc/.npm/_npx/1664326/lib/node_modules/typescript/lib/lib.es5.d.ts:1006*

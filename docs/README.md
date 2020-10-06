@@ -21,7 +21,7 @@
 
 ▸ **farFuture**({ after: undefined \| number ; before: undefined \| number  }): number
 
-*Defined in [repos/relative-random-time/src/index.ts:79](https://github.com/Xunnamius/relative-random-time/blob/b98b584/src/index.ts#L79)*
+*Defined in [repos/relative-random-time/src/index.ts:79](https://github.com/Xunnamius/relative-random-time/blob/cdde8df/src/index.ts#L79)*
 
 Returns a number that is higher than `before` but lower than `after`
 representing a time in the near future (seconds to minutes).
@@ -32,7 +32,7 @@ representing a time in the near future (seconds to minutes).
 
 Name | Type | Default value |
 ------ | ------ | ------ |
-` ` | { after: undefined \| number ; before: undefined \| number  } | {} |
+`(destructured)` | { after: undefined \| number ; before: undefined \| number  } | {} |
 
 **Returns:** number
 
@@ -42,7 +42,7 @@ ___
 
 ▸ **farPast**({ after: undefined \| number ; before: undefined \| number  }): number
 
-*Defined in [repos/relative-random-time/src/index.ts:42](https://github.com/Xunnamius/relative-random-time/blob/b98b584/src/index.ts#L42)*
+*Defined in [repos/relative-random-time/src/index.ts:42](https://github.com/Xunnamius/relative-random-time/blob/cdde8df/src/index.ts#L42)*
 
 Returns a number that is higher than `before` but lower than `after`
 representing a time in the distant past (months to decades).
@@ -53,7 +53,7 @@ representing a time in the distant past (months to decades).
 
 Name | Type | Default value |
 ------ | ------ | ------ |
-` ` | { after: undefined \| number ; before: undefined \| number  } | {} |
+`(destructured)` | { after: undefined \| number ; before: undefined \| number  } | {} |
 
 **Returns:** number
 
@@ -63,7 +63,7 @@ ___
 
 ▸ **fromTimespan**({ after: undefined \| number ; before: undefined \| number ; bounds: number[]  }): number
 
-*Defined in [repos/relative-random-time/src/index.ts:20](https://github.com/Xunnamius/relative-random-time/blob/b98b584/src/index.ts#L20)*
+*Defined in [repos/relative-random-time/src/index.ts:20](https://github.com/Xunnamius/relative-random-time/blob/cdde8df/src/index.ts#L20)*
 
 Returns a number between bounds[0] and bounds[1] (inclusive) that is higher
 than `before` but lower than `after`.
@@ -74,7 +74,7 @@ than `before` but lower than `after`.
 
 Name | Type |
 ------ | ------ |
-` ` | { after: undefined \| number ; before: undefined \| number ; bounds: number[]  } |
+`(destructured)` | { after: undefined \| number ; before: undefined \| number ; bounds: number[]  } |
 
 **Returns:** number
 
@@ -84,7 +84,7 @@ ___
 
 ▸ **nearFuture**({ after: undefined \| number ; before: undefined \| number  }): number
 
-*Defined in [repos/relative-random-time/src/index.ts:69](https://github.com/Xunnamius/relative-random-time/blob/b98b584/src/index.ts#L69)*
+*Defined in [repos/relative-random-time/src/index.ts:69](https://github.com/Xunnamius/relative-random-time/blob/cdde8df/src/index.ts#L69)*
 
 Returns a number that is higher than `before` but lower than `after`
 representing a time in the distant future (months to decades).
@@ -95,7 +95,7 @@ representing a time in the distant future (months to decades).
 
 Name | Type | Default value |
 ------ | ------ | ------ |
-` ` | { after: undefined \| number ; before: undefined \| number  } | {} |
+`(destructured)` | { after: undefined \| number ; before: undefined \| number  } | {} |
 
 **Returns:** number
 
@@ -105,7 +105,7 @@ ___
 
 ▸ **nearPast**({ after: undefined \| number ; before: undefined \| number  }): number
 
-*Defined in [repos/relative-random-time/src/index.ts:52](https://github.com/Xunnamius/relative-random-time/blob/b98b584/src/index.ts#L52)*
+*Defined in [repos/relative-random-time/src/index.ts:52](https://github.com/Xunnamius/relative-random-time/blob/cdde8df/src/index.ts#L52)*
 
 Returns a number that is higher than `before` but lower than `after`
 representing a time in the near past (seconds to minutes).
@@ -116,7 +116,7 @@ representing a time in the near past (seconds to minutes).
 
 Name | Type | Default value |
 ------ | ------ | ------ |
-` ` | { after: undefined \| number ; before: undefined \| number  } | {} |
+`(destructured)` | { after: undefined \| number ; before: undefined \| number  } | {} |
 
 **Returns:** number
 
@@ -126,7 +126,7 @@ ___
 
 ▸ **present**(): number
 
-*Defined in [repos/relative-random-time/src/index.ts:59](https://github.com/Xunnamius/relative-random-time/blob/b98b584/src/index.ts#L59)*
+*Defined in [repos/relative-random-time/src/index.ts:59](https://github.com/Xunnamius/relative-random-time/blob/cdde8df/src/index.ts#L59)*
 
 Returns Date.now()
 

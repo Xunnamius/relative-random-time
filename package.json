@@ -31,7 +31,7 @@
   ],
   "scripts": {
     "build": "npm run clean && tsc --project tsconfig.types.json && NODE_ENV=production webpack -p && babel src --extensions .ts --out-dir dist/modules",
-    "build-docs": "rm -rf docs && npx -p typescript -p typedoc@0.17.0-3 -p typedoc-plugin-markdown typedoc --plugin typedoc-plugin-markdown --out docs --readme none --mode library src/index.ts && find docs -name '*.md' -exec sed -i -e 's/`__namedParameters`: //g' {} + && find docs -name '*.md' -exec sed -i -e 's/__namedParameters/ /g' {} + && sed -i -e 1,4d docs/README.md",
+    "build-docs": "rm -rf docs && npx -p typescript -p typedoc@0.17.0-3 -p typedoc-plugin-markdown typedoc --plugin typedoc-plugin-markdown --out docs --readme none --mode library src/index.ts && find docs -name '*.md' -exec sed -i -e 's/`__namedParameters`: //g' {} + && find docs -name '*.md' -exec sed -i -e 's/__namedParameters/\\(destructured\\)/g' {} + && find docs -name '*.md' -exec sed -i '/_npx/d' {} + && sed -i -e 1,4d docs/README.md",
     "check-types": "command -v unbuffer >/dev/null && (unbuffer tsc; unbuffer eslint .) | less -R -FX || (tsc; eslint .)",
     "clean": "rm -rf dist",
     "list-tasks": "npm run",
