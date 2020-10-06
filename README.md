@@ -84,7 +84,7 @@ console.log((new Date(nearerFarPast)).toString());
 
 ## Documentation
 
-Documentation can be found under [`docs/`](docs/README) and can be built with
+Documentation can be found under [`docs/`](docs/README.md) and can be built with
 `npm run build-docs`.
 
 ## Contributing
