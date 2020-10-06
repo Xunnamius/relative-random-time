@@ -14,6 +14,8 @@ export class BadBoundsError extends RangeError {}
 /**
  * Returns a number between bounds[0] and bounds[1] (inclusive) that is higher
  * than `before` but lower than `after`.
+ *
+ * @throws BadBoundsError if passed invalid bounds
  */
 export function fromTimespan({ bounds, before, after }: TimespanParams) {
     // ? Ensure sorting happens in ascending order
@@ -34,6 +36,8 @@ export function fromTimespan({ bounds, before, after }: TimespanParams) {
 /**
  * Returns a number that is higher than `before` but lower than `after`
  * representing a time in the distant past (months to decades).
+ *
+ * @throws BadBoundsError if passed invalid bounds
  */
 export function farPast({ before, after }: TimeParams = {}) {
     return fromTimespan({ bounds: [-FAR_SMALLEST_ABS, -FAR_LARGEST_ABS], before, after });
@@ -42,6 +46,8 @@ export function farPast({ before, after }: TimeParams = {}) {
 /**
  * Returns a number that is higher than `before` but lower than `after`
  * representing a time in the near past (seconds to minutes).
+ *
+ * @throws BadBoundsError if passed invalid bounds
  */
 export function nearPast({ before, after }: TimeParams = {}) {
     return fromTimespan({ bounds: [-NEAR_SMALLEST_ABS, -NEAR_LARGEST_ABS], before, after });
@@ -57,6 +63,8 @@ export function present() {
 /**
  * Returns a number that is higher than `before` but lower than `after`
  * representing a time in the distant future (months to decades).
+ *
+ * @throws BadBoundsError if passed invalid bounds
  */
 export function nearFuture({ before, after }: TimeParams = {}) {
     return fromTimespan({ bounds: [NEAR_SMALLEST_ABS, NEAR_LARGEST_ABS], before, after });
@@ -65,6 +73,8 @@ export function nearFuture({ before, after }: TimeParams = {}) {
 /**
  * Returns a number that is higher than `before` but lower than `after`
  * representing a time in the near future (seconds to minutes).
+ *
+ * @throws BadBoundsError if passed invalid bounds
  */
 export function farFuture({ before, after }: TimeParams = {}) {
     return fromTimespan({ bounds: [FAR_SMALLEST_ABS, FAR_LARGEST_ABS], before, after });

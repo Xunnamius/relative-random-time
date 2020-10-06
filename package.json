@@ -1,7 +1,7 @@
 {
   "name": "relative-random-time",
-  "version": "1.0.0",
-  "description": "Quickly and easily get \"fuzzy\" millisecond counts close/far before/after certain points in time",
+  "version": "1.0.1",
+  "description": "Quickly and easily get \"fuzzy\" millisecond counts in the near/far past/future relative to some point in time",
   "keywords": [
     "time",
     "timer",
@@ -31,6 +31,7 @@
   ],
   "scripts": {
     "build": "npm run clean && tsc --project tsconfig.types.json && NODE_ENV=production webpack -p && babel src --extensions .ts --out-dir dist/modules",
+    "build-docs": "rm -rf docs && npx -p typescript -p typedoc@0.17.0-3 -p typedoc-plugin-markdown typedoc --plugin typedoc-plugin-markdown --out docs --readme none --mode library src/index.ts && find docs -name '*.md' -exec sed -i -e 's/`__namedParameters`: //g' {} + && find docs -name '*.md' -exec sed -i -e 's/__namedParameters/ /g' {} + && sed -i -e 1,4d docs/README.md",
     "check-types": "command -v unbuffer >/dev/null && (unbuffer tsc; unbuffer eslint .) | less -R -FX || (tsc; eslint .)",
     "clean": "rm -rf dist",
     "list-tasks": "npm run",
