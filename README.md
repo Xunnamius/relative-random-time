@@ -92,8 +92,8 @@ Documentation can be found under [`docs/`](docs/README.md) and can be built with
 Issues and pull requests are welcome! In lieu of a formal styleguide, take care
 to maintain the existing coding style.
 
-Add unit tests for any new or changed functionality (if necessary). Please lint
-and test your code!
+Add unit tests for any new or changed functionality. Please lint and test your
+code!
 
 ## Release History
 
