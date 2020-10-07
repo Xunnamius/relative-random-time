@@ -1,6 +1,6 @@
 {
   "name": "relative-random-time",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Quickly and easily get \"fuzzy\" millisecond counts in the near/far past/future relative to some point in time",
   "keywords": [
     "time",

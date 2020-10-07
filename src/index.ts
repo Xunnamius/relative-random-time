@@ -2,6 +2,8 @@ import randomInt from 'random-int'
 
 import type { TimeParams, TimespanParams } from './types'
 
+export * from './types';
+
 const FAR_LARGEST_ABS = 10**12;
 const FAR_SMALLEST_ABS = 10**9;
 const NEAR_LARGEST_ABS = 10**5;
