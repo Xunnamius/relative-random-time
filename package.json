@@ -40,6 +40,9 @@
     "repl": "command -v rlwrap >/dev/null && rlwrap npx -p @babel/core -p @babel/node babel-node",
     "test": "BABEL_ENV=test jest"
   },
+  "dependencies": {
+    "random-int": "^2.0.1"
+  },
   "devDependencies": {
     "@babel/cli": "^7.11.6",
     "@babel/core": "^7.11.6",
@@ -78,8 +81,5 @@
     "typescript": "^4.0.3",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12"
-  },
-  "dependencies": {
-    "random-int": "^2.0.1"
   }
 }
