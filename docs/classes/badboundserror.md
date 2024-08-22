@@ -27,6 +27,7 @@
 
 *Inherited from [BadBoundsError](badboundserror.md).[message](badboundserror.md#message)*
 
+*Defined in node_modules/typescript/lib/lib.es5.d.ts:974*
 
 ___
 
@@ -36,6 +37,7 @@ ___
 
 *Inherited from [BadBoundsError](badboundserror.md).[name](badboundserror.md#name)*
 
+*Defined in node_modules/typescript/lib/lib.es5.d.ts:973*
 
 ___
 
@@ -45,6 +47,7 @@ ___
 
 *Inherited from [BadBoundsError](badboundserror.md).[stack](badboundserror.md#stack)*
 
+*Defined in node_modules/typescript/lib/lib.es5.d.ts:975*
 
 ___
 
@@ -52,3 +55,4 @@ ___
 
 ▪ `Static` **RangeError**: RangeErrorConstructor
 
+*Defined in node_modules/typescript/lib/lib.es5.d.ts:1006*

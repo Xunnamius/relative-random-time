@@ -6,6 +6,11 @@
 
 * [BadBoundsError](classes/badboundserror.md)
 
+### Type aliases
+
+* [TimeParams](README.md#timeparams)
+* [TimespanParams](README.md#timespanparams)
+
 ### Functions
 
 * [farFuture](README.md#farfuture)
@@ -15,13 +20,36 @@
 * [nearPast](README.md#nearpast)
 * [present](README.md#present)
 
+## Type aliases
+
+### TimeParams
+
+Ƭ  **TimeParams**: { after?: undefined \| number ; before?: undefined \| number  }
+
+*Defined in [src/types.ts:1](https://github.com/Xunnamius/relative-random-time/blob/a222753/src/types.ts#L1)*
+
+#### Type declaration:
+
+Name | Type |
+------ | ------ |
+`after?` | undefined \| number |
+`before?` | undefined \| number |
+
+___
+
+### TimespanParams
+
+Ƭ  **TimespanParams**: [TimeParams](README.md#timeparams) & { bounds: number[]  }
+
+*Defined in [src/types.ts:6](https://github.com/Xunnamius/relative-random-time/blob/a222753/src/types.ts#L6)*
+
 ## Functions
 
 ### farFuture
 
 ▸ **farFuture**({ after: undefined \| number ; before: undefined \| number  }): number
 
-*Defined in [repos/relative-random-time/src/index.ts:79](https://github.com/Xunnamius/relative-random-time/blob/cdde8df/src/index.ts#L79)*
+*Defined in [src/index.ts:81](https://github.com/Xunnamius/relative-random-time/blob/a222753/src/index.ts#L81)*
 
 Returns a number that is higher than `before` but lower than `after`
 representing a time in the near future (seconds to minutes).
@@ -42,7 +70,7 @@ ___
 
 ▸ **farPast**({ after: undefined \| number ; before: undefined \| number  }): number
 
-*Defined in [repos/relative-random-time/src/index.ts:42](https://github.com/Xunnamius/relative-random-time/blob/cdde8df/src/index.ts#L42)*
+*Defined in [src/index.ts:44](https://github.com/Xunnamius/relative-random-time/blob/a222753/src/index.ts#L44)*
 
 Returns a number that is higher than `before` but lower than `after`
 representing a time in the distant past (months to decades).
@@ -63,7 +91,7 @@ ___
 
 ▸ **fromTimespan**({ after: undefined \| number ; before: undefined \| number ; bounds: number[]  }): number
 
-*Defined in [repos/relative-random-time/src/index.ts:20](https://github.com/Xunnamius/relative-random-time/blob/cdde8df/src/index.ts#L20)*
+*Defined in [src/index.ts:22](https://github.com/Xunnamius/relative-random-time/blob/a222753/src/index.ts#L22)*
 
 Returns a number between bounds[0] and bounds[1] (inclusive) that is higher
 than `before` but lower than `after`.
@@ -84,7 +112,7 @@ ___
 
 ▸ **nearFuture**({ after: undefined \| number ; before: undefined \| number  }): number
 
-*Defined in [repos/relative-random-time/src/index.ts:69](https://github.com/Xunnamius/relative-random-time/blob/cdde8df/src/index.ts#L69)*
+*Defined in [src/index.ts:71](https://github.com/Xunnamius/relative-random-time/blob/a222753/src/index.ts#L71)*
 
 Returns a number that is higher than `before` but lower than `after`
 representing a time in the distant future (months to decades).
@@ -105,7 +133,7 @@ ___
 
 ▸ **nearPast**({ after: undefined \| number ; before: undefined \| number  }): number
 
-*Defined in [repos/relative-random-time/src/index.ts:52](https://github.com/Xunnamius/relative-random-time/blob/cdde8df/src/index.ts#L52)*
+*Defined in [src/index.ts:54](https://github.com/Xunnamius/relative-random-time/blob/a222753/src/index.ts#L54)*
 
 Returns a number that is higher than `before` but lower than `after`
 representing a time in the near past (seconds to minutes).
@@ -126,7 +154,7 @@ ___
 
 ▸ **present**(): number
 
-*Defined in [repos/relative-random-time/src/index.ts:59](https://github.com/Xunnamius/relative-random-time/blob/cdde8df/src/index.ts#L59)*
+*Defined in [src/index.ts:61](https://github.com/Xunnamius/relative-random-time/blob/a222753/src/index.ts#L61)*
 
 Returns Date.now()
 

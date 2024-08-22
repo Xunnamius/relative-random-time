@@ -1,8 +1,11 @@
 {
   "name": "relative-random-time",
-  "version": "1.0.2",
-  "description": "Quickly and easily get \"fuzzy\" millisecond counts in the near/far past/future relative to some point in time",
+  "version": "1.0.3",
+  "description": "⛔️ [DEPRECATED] Quickly and easily get \"fuzzy\" millisecond counts in the near/far past/future relative to some point in time",
   "keywords": [
+    "deprecated",
+    "obsolete",
+    "archived",
     "time",
     "timer",
     "random",
@@ -17,7 +20,7 @@
     "type": "git",
     "url": "https://github.com/Xunnamius/relative-random-time"
   },
-  "license": "Unlicense",
+  "license": "MIT",
   "author": "Xunnamius",
   "sideEffects": false,
   "main": "dist/umd.js",
@@ -30,8 +33,8 @@
     "/README.md"
   ],
   "scripts": {
-    "build": "npm run clean && tsc --project tsconfig.types.json && NODE_ENV=production webpack -p && babel src --extensions .ts --out-dir dist/modules",
-    "build-docs": "rm -rf docs && npx -p typescript -p typedoc@0.17.0-3 -p typedoc-plugin-markdown typedoc --plugin typedoc-plugin-markdown --out docs --readme none --mode library src/index.ts && find docs -name '*.md' -exec sed -i -e 's/`__namedParameters`: //g' {} + && find docs -name '*.md' -exec sed -i -e 's/__namedParameters/\\(destructured\\)/g' {} + && find docs -name '*.md' -exec sed -i '/_npx/d' {} + && sed -i -e 1,4d docs/README.md",
+    "build": "npm run clean && tsc --project tsconfig.types.json && NODE_ENV=production webpack -p && babel src --extensions .ts --out-dir dist/modules && { echo -n '\"undefined\"!=typeof window&&(window.global=window);'; cat dist/umd.js; } > dist/umd.js-tmp && mv -f dist/umd.js-tmp dist/umd.js",
+    "build-docs": "rm -rf docs && typedoc --plugin typedoc-plugin-markdown --out docs --readme none --mode library src/index.ts && find docs -name '*.md' -exec sed -i -e 's/`__namedParameters`: //g' {} + && find docs -name '*.md' -exec sed -i -e 's/__namedParameters/\\(destructured\\)/g' {} + && sed -i -e 1,4d docs/README.md",
     "check-types": "command -v unbuffer >/dev/null && (unbuffer tsc; unbuffer eslint .) | less -R -FX || (tsc; eslint .)",
     "clean": "rm -rf dist",
     "list-tasks": "npm run",
@@ -71,13 +74,15 @@
     "eslint": "^7.10.0",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-import-resolver-typescript": "^2.3.0",
-    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jest": "^24.0.2",
     "eslint-plugin-react": "^7.21.3",
     "jest": "^26.4.2",
     "jest-circus": "^26.4.2",
     "jest-extended": "^0.11.5",
     "source-map-support": "^0.5.19",
+    "typedoc": "^0.17.0-3",
+    "typedoc-plugin-markdown": "^3.0.7",
     "typescript": "^4.0.3",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12"
